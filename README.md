@@ -30,8 +30,8 @@ The WatchDog executable is provided to the user. When the startWD function is ca
 4. **Failure Detection and Recovery:**
 * If the number of missed signals exceeds the threshold, the WatchDog concludes that the user program has failed or crashed.
 * Depending on the execution path, the WatchDog process will initiate the recovery procedure:
-** If the WatchDog process is monitoring the user program and detects a failure, it forks and executes a new WatchDog process to monitor the user program again.
-** If the user program is being monitored and fails, the WatchDog process will execute a new user program process, effectively restarting the user program with the provided executable file.
+* * If the WatchDog process is monitoring the user program and detects a failure, it forks and executes a new WatchDog process to monitor the user program again.
+* * If the user program is being monitored and fails, the WatchDog process will execute a new user program process, effectively restarting the user program with the provided executable file.
 
 5. **Stopping WatchDog:**
 The user program can call the ```stopWD``` function to stop the WatchDog process, terminating the monitoring and releasing any allocated resources.
